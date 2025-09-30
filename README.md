@@ -1,24 +1,28 @@
 # EffDirEditor
 
-This project converts old MATLAB scripts (`WriteEffDir.m`, `IsolateEff.m`, etc.) for working with SimCity 4 EffDir files into Python.  
-It also provides a way to build a **standalone EXE** so you can run the tool without needing Python installed.
+EffDirEditor is a Python project that re-implements three original MATLAB scripts 
+(`ReadEffDir.m`, `WriteEffDir.m`, and `IsolateEff.m`) line by line in Python.  
+The goal is to provide a cross-platform, standalone **EffDir Editor** that can be 
+packaged into an `.exe` for Windows.
 
 ## Features
-- Read `.effdir` files
-- Write `.effdir` files
-- Isolate specific effects by name or index
-- Cross-platform (Python), with Windows `.exe` build via GitHub Actions
+- Read `.effdir` binary files into a structured Python object (`read_effdir.py`)
+- Write structured data back into `.effdir` format (`write_effdir.py`)
+- Isolate and extract single effects from an `.effdir` (`isolate_eff.py`)
+- A `main.py` script to tie everything together in a command-line interface
 
 ## Usage
-Once built, you can run:
+Once built into an executable, the tool will allow users to:
+- Open existing `.effdir` files
+- Extract and edit specific effects
+- Save modified `.effdir` files
 
-## Build Instructions
-If you want to build the `.exe` yourself:
-1. Clone the repository
-2. Run `pip install -r requirements.txt`
-3. Use PyInstaller:
+## Build
+This project includes a GitHub Actions workflow to automatically package the 
+Python scripts into a Windows `.exe` using **PyInstaller**.  
+When you push changes to this repository, the `.exe` will be built in the cloud 
+and provided as a downloadable artifact.
 
-Or use the provided **GitHub Action** which automatically builds the `.exe` in the cloud.
+## License
+No license yet — private use only.
 
-## Status
-Work in progress — based on reverse-engineered MATLAB scripts.
