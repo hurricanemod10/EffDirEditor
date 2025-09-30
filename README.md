@@ -11,3 +11,14 @@ It also provides a way to build a **standalone EXE** so you can run the tool wit
 
 ## Usage
 Once built, you can run:
+
+## Build Instructions
+If you want to build the `.exe` yourself:
+1. Clone the repository
+2. Run `pip install -r requirements.txt`
+3. Use PyInstaller:
+
+Or use the provided **GitHub Action** which automatically builds the `.exe` in the cloud.
+
+## Status
+Work in progress — based on reverse-engineered MATLAB scripts.
